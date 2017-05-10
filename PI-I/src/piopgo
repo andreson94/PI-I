@@ -1,0 +1,76 @@
+package teste_jogo;
+  import java.util.Random;
+   import java.util.Scanner;
+     public class Teste_jogo {
+      public static void main(String[] args) {
+      String alternativa;
+       Scanner leitor = new Scanner (System.in);
+        Random rng = new Random ();
+        String questao, tentativas  , pontos  ;
+        /*do{
+            questao = rng.nextInt(20);
+           switch(questao){
+            case 1: 
+                System.out.println("Qual o nome do primeiro avião de Santos Dumont? R: 14 Bis.");
+                alternativa = a;
+                questao = alternativa;
+                
+                
+        if(questao != alternativa){
+            pontos = pontos + 50;
+            System.out.println("alternativa correta");
+            
+        }else{
+            System.out.println("altenativa incorreta");
+            pontos = pontos - 50;
+        }if(pontos <= 0 && tentativas == 0){
+            System.out.println("fim de jogo");
+        }else{
+            System.out.println(pontos);
+        }
+        */    
+        
+        
+          System.out.println(" !!pergunta!! " + "\n");
+        
+          System.out.println("Qual o nome do primeiro avião de Santos Dumont? ");
+        
+          System.out.println("A- Bis ");
+          System.out.println("B- verme ");
+          System.out.println("C- avião do forró");
+          System.out.println("D- A bunda do Rafael" + "\n");
+          System.out.println("RESPOSTA !" );
+          questao = leitor.next();
+          
+          switch(questao){
+              
+              case "a":
+                  System.out.println("resposta correta ");
+                 
+                  break;
+              case "b":
+                  System.out.println("Resposta .......... !!ERRADA!! ");
+                 
+                  break;
+                  
+              case "c":
+                  System.out.println("Resposta .......... !!ERRADA!! ");
+                 
+                  break;
+              case "d":
+                  System.out.println("Resposta .......... !!ERRADA!! ");
+                  
+                  break;
+              default:
+                  System.out.println("Essa alternativa não existe ");
+                 
+                  
+                  
+          }
+
+          
+          
+        }               
+     }       
+                  
+              
