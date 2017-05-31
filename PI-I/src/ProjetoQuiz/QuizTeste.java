@@ -74,6 +74,6 @@ public class QuizTeste {
                 JOptionPane.showMessageDialog(null, "O código informado é inválido.");
                 break;
                 */    
-     Int continue = JOptionPane.showConfirmDialog(null,"DESEJA CONTINUAR?");       
+     //Int continue = JOptionPane.showConfirmDialog(null,"DESEJA CONTINUAR?");       
     }
     }
