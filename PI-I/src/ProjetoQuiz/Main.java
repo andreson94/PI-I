@@ -1,5 +1,4 @@
 package ProjetoQuiz;
-import com.sun.management.jmx.Trace;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -20,6 +19,7 @@ public class Main extends JFrame implements ActionListener{
         JLabel jlChances = new JLabel("Chances: 3");
 	int posAtual = 0;
 	int pontos = 0;
+        int chances = 3;
 	JButton jbResponder = new JButton("Responder");
 	ButtonGroup bgOp = new ButtonGroup();
 	public Main() {
@@ -159,6 +159,36 @@ public class Main extends JFrame implements ActionListener{
 		perguntas[15][3] = "Java";
 		perguntas[15][4] = "Algoritmo";
 		perguntas[15][5] = "4";
+                
+                perguntas[16][0] = "Java ou PHP?";
+		perguntas[16][1] = "Vb.net";
+		perguntas[16][2] = "PHP";
+		perguntas[16][3] = "Java";
+		perguntas[16][4] = "Algoritmo";
+		perguntas[16][5] = "3";
+                
+                perguntas[17][0] = "Java ou PHP?";
+		perguntas[17][1] = "Vb.net";
+		perguntas[17][2] = "PHP";
+		perguntas[17][3] = "Java";
+		perguntas[17][4] = "Algoritmo";
+		perguntas[17][5] = "4";
+                
+                perguntas[18][0] = "Qanto é 1 + 1?";
+		perguntas[18][1] = "2";
+		perguntas[18][2] = "3";
+		perguntas[18][3] = "6";
+		perguntas[18][4] = "1";
+		perguntas[18][5] = "1";
+		
+		perguntas[19][0] = "Batman ou Superman?";
+		perguntas[19][1] = "Superman";
+		perguntas[19][2] = "Batman";
+		perguntas[19][3] = "Aquaman";
+		perguntas[19][4] = "Cresce menino";
+		perguntas[19][5] = "2";
+		
+                
 	}
 	public void montaTela() {
 		jlPergunta.setText(perguntas[posAtual][0]);
@@ -176,16 +206,23 @@ public class Main extends JFrame implements ActionListener{
 		
 
 		if (questoes[respostaCerta-1].isSelected()){
-			pontos = pontos + 10;
-                        
+			pontos = pontos + 100;
+                        chances = chances;
+                        JOptionPane.showMessageDialog(null, "Resposta Certa você ganhou " + pontos + " reais" );
+
 		} else{
-			pontos = pontos - 10;
-		}
+			pontos = pontos - 100;
+                        chances = chances - 1;
+                        JOptionPane.showMessageDialog(null, "resposta Errada");
+
+                }
 		jlPontuacao.setText("Pontuação: " + pontos);
-		if (posAtual<2)
+                jlChances.setText("Chances: " + chances);
+                if (posAtual<20){
 			posAtual++;
-		else
-			JOptionPane.showMessageDialog(null, "Você Ganhou!");
+                        
+                }else
+			JOptionPane.showMessageDialog(null, "Fim de Jogo");
 		montaTela();
 		
 		

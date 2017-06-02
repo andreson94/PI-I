@@ -5,7 +5,10 @@
  */
 package ProjetoQuiz;
 
-public class testeBeta {
-    String [][] perguntas = new String[3][6];
+/**
+ *
+ * @author andreson.csilva
+ */
+public class GridBagLayoutLayout {
     
 }
