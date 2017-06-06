@@ -48,11 +48,11 @@ public class Main extends JFrame implements ActionListener{
 		setVisible(true);
 	}
 	public void carregaPerguntas(){
-		perguntas[0][0] = "Qanto é 1 + 1?";
-		perguntas[0][1] = "2";
-		perguntas[0][2] = "3";
-		perguntas[0][3] = "6";
-		perguntas[0][4] = "1";
+		perguntas[0][0] = "Qual o valor de PI";
+		perguntas[0][1] = "A - 3,14";
+		perguntas[0][2] = "B - 5,55";
+		perguntas[0][3] = "C - 10,14";
+		perguntas[0][4] = "D - 13,04";
 		perguntas[0][5] = "1";
 		
 		perguntas[1][0] = "Batman ou Superman?";
@@ -204,27 +204,27 @@ public class Main extends JFrame implements ActionListener{
 		// TODO Auto-generated method stub
 		int respostaCerta = Integer.parseInt(perguntas[posAtual][5]);
 		
-
+                do{
 		if (questoes[respostaCerta-1].isSelected()){
 			pontos = pontos + 100;
                         chances = chances;
-                        JOptionPane.showMessageDialog(null, "Resposta Certa você ganhou " + pontos + " reais" );
 
 		} else{
 			pontos = pontos - 100;
                         chances = chances - 1;
-                        JOptionPane.showMessageDialog(null, "resposta Errada");
-
                 }
 		jlPontuacao.setText("Pontuação: " + pontos);
                 jlChances.setText("Chances: " + chances);
-                if (posAtual<20){
-			posAtual++;
-                        
+                if (posAtual<20 && chances > 0){
+			posAtual = posAtual+1;
+                }                
+                }while(chances>0);
+
+                if (chances < 1 || pontos < 1 && posAtual == 19){
+                        JOptionPane.showMessageDialog(null, "GAME OVER"); 
                 }else
-			JOptionPane.showMessageDialog(null, "Fim de Jogo");
+			JOptionPane.showMessageDialog(null, "VOCÊ GANHOU "+ pontos);
 		montaTela();
-		
 		
 	}
 }
