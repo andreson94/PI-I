@@ -35,6 +35,7 @@ public class Quiz extends JFrame implements ActionListener{
 		}
 		montaTela();
 		jlPontuacao.setHorizontalAlignment(JTextField.RIGHT);
+                jlChances.setHorizontalAlignment(JTextField.RIGHT);
 		add(jlPergunta);
 		add(questoes[0]);
 		add(questoes[1]);

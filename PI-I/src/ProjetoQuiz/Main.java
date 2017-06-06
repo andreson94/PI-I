@@ -20,12 +20,14 @@ public class Main extends JFrame implements ActionListener{
 	int posAtual = 0;
 	int pontos = 0;
         int chances = 3;
+        JFrame jframe = new JFrame();
 	JButton jbResponder = new JButton("Responder");
 	ButtonGroup bgOp = new ButtonGroup();
 	public Main() {
 		super(" T.I S H O W");
-		setLayout(new GridLayout(8,3));
-		
+                
+		super.setLayout(new GridLayout(8,3));
+		super.setSize(800,500);
                 carregaPerguntas();
 		
                 for (int id=0;id<20;id++){
@@ -69,63 +71,62 @@ public class Main extends JFrame implements ActionListener{
 		perguntas[2][4] = "Algoritmo";
 		perguntas[2][5] = "3";
                 
-                perguntas[3][0] = "Java ou PHP?";
+                perguntas[3][0] = "J";
 		perguntas[3][1] = "Vb.net";
 		perguntas[3][2] = "PHP";
 		perguntas[3][3] = "Java";
 		perguntas[3][4] = "Algoritmo";
 		perguntas[3][5] = "4";
                 
-                perguntas[4][0] = "Qanto é 1 + 1?";
+                perguntas[4][0] = "Q 1 + 1?";
 		perguntas[4][1] = "2";
 		perguntas[4][2] = "3";
 		perguntas[4][3] = "6";
 		perguntas[4][4] = "1";
 		perguntas[4][5] = "1";
 		
-		perguntas[5][0] = "Batman ou Superman?";
-		perguntas[5][1] = "Superman";
+		perguntas[5][0] = "Ba";
 		perguntas[5][2] = "Batman";
 		perguntas[5][3] = "Aquaman";
 		perguntas[5][4] = "Cresce menino";
 		perguntas[5][5] = "2";
 		
-		perguntas[6][0] = "Java ou PHP?";
+		perguntas[6][0] = "Ju PHP?";
 		perguntas[6][1] = "Vb.net";
 		perguntas[6][2] = "PHP";
 		perguntas[6][3] = "Java";
 		perguntas[6][4] = "Algoritmo";
 		perguntas[6][5] = "3";
                 
-                perguntas[7][0] = "Java ou PHP?";
+                perguntas[7][0] = "JavHP?";
 		perguntas[7][1] = "Vb.net";
 		perguntas[7][2] = "PHP";
 		perguntas[7][3] = "Java";
 		perguntas[7][4] = "Algoritmo";
 		perguntas[7][5] = "4";
                 
-                perguntas[8][0] = "Qanto é 1 + 1?";
+                perguntas[8][0] = "Qa 1 + 1?";
 		perguntas[8][1] = "2";
 		perguntas[8][2] = "3";
 		perguntas[8][3] = "6";
 		perguntas[8][4] = "1";
 		perguntas[8][5] = "1";
 		
-		perguntas[9][0] = "Batman ou Superman?";
+		perguntas[9][0] = "Batuan?";
 		perguntas[9][1] = "Superman";
 		perguntas[9][2] = "Batman";
 		perguntas[9][3] = "Aquaman";
 		perguntas[9][4] = "Cresce menino";
 		perguntas[9][5] = "2";
 		
-		perguntas[10][0] = "Java ou PHP?";
+		perguntas[10][0] = "JavP?";
 		perguntas[10][1] = "Vb.net";
 		perguntas[10][2] = "PHP";
 		perguntas[10][3] = "Java";
 		perguntas[10][4] = "Algoritmo";
 		perguntas[10][5] = "3";
                 
-                perguntas[11][0] = "Java ou PHP?";
+                perguntas[11][0] = "Ja?";
 		perguntas[11][1] = "Vb.net";
 		perguntas[11][2] = "PHP";
 		perguntas[11][3] = "Java";
@@ -206,12 +207,12 @@ public class Main extends JFrame implements ActionListener{
 		
 
 		if (questoes[respostaCerta-1].isSelected()){
-			pontos = pontos + 100;
+			pontos = pontos + 50;
                         chances = chances;
                         JOptionPane.showMessageDialog(null, "Resposta Certa você ganhou " + pontos + " reais" );
 
 		} else{
-			pontos = pontos - 100;
+			pontos = pontos - 50;
                         chances = chances - 1;
                         JOptionPane.showMessageDialog(null, "resposta Errada");
 
